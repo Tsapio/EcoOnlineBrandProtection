@@ -52,16 +52,8 @@
             background-color: #f8fafc;
             color: #1e293b;
         }
+        .cost-row:nth-child(even) { background-color: #f8fafc; }
     </style>
-    <!-- 
-        Narrative Plan Update:
-        1. Intro: Define the "Shield and Sword" strategy.
-        2. Tiers Visualized: Compare the CPC costs (Bar Chart).
-        3. Strategic Matrix: Radar chart comparing Risk vs Reward.
-        4. Optimized Roadmap: 4-Phase rollout assuming assets exist.
-        
-        NO SVG / NO MERMAID CONFIRMED.
-    -->
 </head>
 <body class="font-sans antialiased text-slate-800">
 
@@ -138,7 +130,78 @@
             </div>
         </section>
 
-        <!-- Section 2: Strategic Decision Matrix (Radar Chart) -->
+        <!-- Section 2: Fiscal Allocation (Table & Donut Chart) -->
+        <section class="mb-20">
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+                <div class="p-8 md:p-12 bg-brand-dark text-white">
+                    <h2 class="text-3xl font-bold mb-4">Fiscal Allocation: 30-Day Budget Projection</h2>
+                    <p class="text-slate-300 max-w-4xl">
+                        A surgical allocation of budget ensures we defend our brand baseline for approximately <strong>$2k/month</strong> while funding aggressive category growth as the primary engine. The bulk of the budget (~55%) targets "Category Lead" status.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-0 border-b border-slate-100">
+                    <!-- Donut Chart Column -->
+                    <div class="lg:col-span-2 p-8 md:p-12 bg-slate-50 border-r border-slate-100">
+                        <h4 class="text-lg font-bold mb-6 text-slate-800">Budget Composition (Midpoint)</h4>
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="budgetDonutChart"></canvas>
+                        </div>
+                    </div>
+                    <!-- Table Column -->
+                    <div class="lg:col-span-3 p-0 bg-white">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="bg-slate-100 text-slate-500 uppercase text-[10px] font-black tracking-widest">
+                                    <tr>
+                                        <th class="p-6">Strategy Tier</th>
+                                        <th class="p-6">Daily</th>
+                                        <th class="p-6">Weekly</th>
+                                        <th class="p-6">Monthly Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-sm">
+                                    <tr class="cost-row">
+                                        <td class="p-6">
+                                            <span class="font-bold text-brand-secondary block text-base">Tier 1: Advocacy</span>
+                                            <span class="text-xs text-slate-500">Non-negotiable Baseline</span>
+                                        </td>
+                                        <td class="p-6">$50 – $70</td>
+                                        <td class="p-6">$350 – $490</td>
+                                        <td class="p-6 font-bold text-slate-900">$1,500 – $2,100</td>
+                                    </tr>
+                                    <tr class="cost-row">
+                                        <td class="p-6">
+                                            <span class="font-bold text-brand-primary block text-base">Tier 2: Category</span>
+                                            <span class="text-xs text-slate-500">The Growth Engine</span>
+                                        </td>
+                                        <td class="p-6">$250 – $425</td>
+                                        <td class="p-6">$1,750 – $2,975</td>
+                                        <td class="p-6 font-bold text-slate-900">$7,500 – $12,750</td>
+                                    </tr>
+                                    <tr class="cost-row">
+                                        <td class="p-6">
+                                            <span class="font-bold text-brand-accent block text-base">Tier 3: Acquisition</span>
+                                            <span class="text-xs text-slate-500">The Surgical Poach</span>
+                                        </td>
+                                        <td class="p-6">$140 – $280</td>
+                                        <td class="p-6">$980 – $1,960</td>
+                                        <td class="p-6 font-bold text-slate-900">$4,200 – $8,400</td>
+                                    </tr>
+                                    <tr class="bg-slate-900 text-white">
+                                        <td class="p-6 font-black uppercase tracking-wider">Estimated Totals</td>
+                                        <td class="p-6 font-bold">$440 – $775</td>
+                                        <td class="p-6 font-bold">$3,080 – $5,425</td>
+                                        <td class="p-6 font-black text-lg text-brand-secondary">$13,200 – $23,250</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Strategic Decision Matrix (Radar Chart) -->
         <section class="mb-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div class="order-2 lg:order-1">
@@ -180,7 +243,7 @@
             </div>
         </section>
 
-        <!-- Section 3: 30-Day Roadmap (Gantt Chart) -->
+        <!-- Section 4: 30-Day Roadmap (Gantt Chart) -->
         <section class="mb-20">
             <div class="bg-white rounded-2xl shadow-md overflow-hidden">
                 <div class="p-8 md:p-12 border-b border-slate-100">
@@ -302,7 +365,35 @@
             }
         });
 
-        // --- CHART 2: Radar ---
+        // --- CHART 2: Budget Composition (Donut) ---
+        const budgetCtx = document.getElementById('budgetDonutChart').getContext('2d');
+        new Chart(budgetCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Tier 1: Brand Advocacy', 'Tier 2: Category Integration', 'Tier 3: Market Acquisition'],
+                datasets: [{
+                    data: [1800, 10125, 6300], // Midpoints: 1.8k, 10.1k, 6.3k
+                    backgroundColor: ['#10b981', '#0ea5e9', '#6366f1'],
+                    hoverOffset: 12,
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '65%',
+                plugins: {
+                    legend: { 
+                        position: 'bottom', 
+                        labels: { usePointStyle: true, padding: 20 } 
+                    },
+                    tooltip: commonTooltipOptions,
+                    title: { display: false }
+                }
+            }
+        });
+
+        // --- CHART 3: Radar ---
         const radarCtx = document.getElementById('strategyRadarChart').getContext('2d');
         const radarLabelsProcessed = ['Risk Profile', 'Capital Cost', 'Market Impact', 'ROI Efficiency'].map(wrapLabel);
 
@@ -360,7 +451,7 @@
             }
         });
 
-        // --- CHART 3: Roadmap ---
+        // --- CHART 4: Roadmap ---
         const roadmapCtx = document.getElementById('roadmapChart').getContext('2d');
         const roadmapLabelsProcessed = [
             'Phase 1: Audit & Tech Verification', 
