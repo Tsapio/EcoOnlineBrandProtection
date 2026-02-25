@@ -54,23 +54,11 @@
         }
     </style>
     <!-- 
-        Palette: "Tech Growth"
-        Primary: Sky Blue (#0ea5e9) - Represents Technology/Online
-        Secondary: Emerald Green (#10b981) - Represents "Eco" and Growth
-        Accent: Indigo (#6366f1) - Represents Strategy/Depth
-    -->
-    <!-- 
-        Narrative Plan:
+        Narrative Plan Update:
         1. Intro: Define the "Shield and Sword" strategy.
         2. Tiers Visualized: Compare the CPC costs (Bar Chart).
-        3. Strategic Matrix: Radar chart comparing Risk vs Reward vs Cost for each tier.
-        4. Timeline: Gantt chart for the 30-day rollout.
-        5. Conclusion: Summary of the decision matrix.
-        
-        Chart Selection Justification (NO SVG):
-        1. Cost Comparison -> Bar Chart (Chart.js): Best for comparing quantitative values (money) across categories.
-        2. Strategic Trade-offs -> Radar Chart (Chart.js): Excellent for multivariate comparison (Risk, Cost, Impact) of the 3 tiers.
-        3. Roadmap -> Horizontal Floating Bar Chart (Chart.js): Effective for showing time duration (Gantt style) without needing SVG.
+        3. Strategic Matrix: Radar chart comparing Risk vs Reward.
+        4. Optimized Roadmap: 4-Phase rollout assuming assets exist.
         
         NO SVG / NO MERMAID CONFIRMED.
     -->
@@ -89,7 +77,7 @@
                 Brand Protection & <br/><span class="text-brand-primary">Keyword Acquisition</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                A comprehensive, capital-intensive framework designed to fortify EcoOnline’s digital presence. This strategy prioritizes "Impression Share" maximization to mitigate competitor encroachment and secure a dominant position in the SERPs.
+                An aggressive framework to secure EcoOnline’s digital footprint. This strategy utilizes existing high-conversion assets to dominate search share and neutralize competitor poaching through a 30-day tactical rollout.
             </p>
         </div>
     </header>
@@ -103,7 +91,7 @@
             <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-brand-secondary hover:shadow-2xl transition-shadow duration-300">
                 <div class="text-brand-secondary font-bold text-sm uppercase mb-2">Tier 1</div>
                 <h3 class="text-2xl font-bold mb-3">Brand Advocacy</h3>
-                <p class="text-slate-600 mb-4 text-sm">Foundational defense. Engagement in high-frequency bidding for branded terms to preclude competitor placement.</p>
+                <p class="text-slate-600 mb-4 text-sm">Immediate defensive posture. Prevents competitors from occupying the top spot on core brand searches.</p>
                 <div class="flex items-center justify-between text-xs font-semibold text-slate-500 bg-slate-50 p-3 rounded">
                     <span>Objective: Lead Retention</span>
                     <span class="text-green-600">Risk: Negligible</span>
@@ -114,7 +102,7 @@
             <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-brand-primary hover:shadow-2xl transition-shadow duration-300">
                 <div class="text-brand-primary font-bold text-sm uppercase mb-2">Tier 2</div>
                 <h3 class="text-2xl font-bold mb-3">Category Integration</h3>
-                <p class="text-slate-600 mb-4 text-sm">Specialized integration. Targeted acquisition of high-intent keywords like "EHS Software" to capture active buyers.</p>
+                <p class="text-slate-600 mb-4 text-sm">Growth-oriented. Leverages existing landing pages to capture high-intent category search volume.</p>
                 <div class="flex items-center justify-between text-xs font-semibold text-slate-500 bg-slate-50 p-3 rounded">
                     <span>Objective: Lead Gen</span>
                     <span class="text-amber-600">Risk: Moderate</span>
@@ -125,7 +113,7 @@
             <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-brand-accent hover:shadow-2xl transition-shadow duration-300">
                 <div class="text-brand-accent font-bold text-sm uppercase mb-2">Tier 3</div>
                 <h3 class="text-2xl font-bold mb-3">Market Acquisition</h3>
-                <p class="text-slate-600 mb-4 text-sm">Aggressive conquesting. Bidding on competitor terms to intercept prospects evaluating rival solutions.</p>
+                <p class="text-slate-600 mb-4 text-sm">Aggressive poaching. Intercepts prospects actively searching for rival software solutions.</p>
                 <div class="flex items-center justify-between text-xs font-semibold text-slate-500 bg-slate-50 p-3 rounded">
                     <span>Objective: Expansion</span>
                     <span class="text-red-600">Risk: Elevated</span>
@@ -137,18 +125,15 @@
         <section class="mb-20">
             <div class="bg-white rounded-2xl shadow-md overflow-hidden">
                 <div class="p-8 md:p-12 border-b border-slate-100">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Financial Analysis: Cost Per Click (CPC) Estimation</h2>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Financial Analysis: CPC Variance by Tier</h2>
                     <p class="text-slate-600 leading-relaxed max-w-4xl">
-                        The financial implications of the strategy vary significantly by tier. Tier 1 (Defense) leverages high "Quality Score" to maintain a minimal Cost Per Click (CPC). Conversely, Tier 3 (Aggression) requires paying a premium to overcome relevance penalties when targeting competitor terms. This chart illustrates the estimated CPC disparity.
+                        Because EcoOnline possesses high-quality relevance for its own name, Tier 1 clicks are hyper-efficient. Tiers 2 and 3 require higher capital expenditure to overcome competitive bidding environments and lower natural relevance for rival terms.
                     </p>
                 </div>
                 <div class="p-8 bg-slate-50">
                     <div class="chart-container">
                         <canvas id="cpcBarChart"></canvas>
                     </div>
-                </div>
-                <div class="p-6 bg-slate-100 text-sm text-slate-500 text-center italic">
-                    Figure 1.1: Comparative Analysis of Estimated Cost Per Click (USD) across strategic tiers.
                 </div>
             </div>
         </section>
@@ -164,30 +149,30 @@
                     </div>
                 </div>
                 <div class="order-1 lg:order-2">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Executive Decision Matrix</h2>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Strategic Trade-offs</h2>
                     <p class="text-slate-600 mb-6 leading-relaxed">
-                        This multivariate analysis visualizes the trade-offs inherent in each strategic tier.
+                        This matrix highlights why a balanced approach is necessary. While Tier 1 is the most cost-efficient, it does not drive new customer acquisition. Tiers 2 and 3 provide the market impact required for growth.
                     </p>
                     <ul class="space-y-6">
                         <li class="flex items-start">
                             <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-secondary/10 flex items-center justify-center text-brand-secondary font-bold mr-4">1</div>
                             <div>
-                                <h4 class="font-bold text-slate-900">Foundational Brand Advocacy</h4>
-                                <p class="text-sm text-slate-600 mt-1">Offers the highest ROI with minimal capital risk, but focuses solely on retaining existing brand traffic (Defensive).</p>
+                                <h4 class="font-bold text-slate-900">Foundational Defense</h4>
+                                <p class="text-sm text-slate-600 mt-1">High efficiency, low risk. Maintains our existing lead pool against conquesting ads.</p>
                             </div>
                         </li>
                         <li class="flex items-start">
                             <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary font-bold mr-4">2</div>
                             <div>
-                                <h4 class="font-bold text-slate-900">Specialized Category Integration</h4>
-                                <p class="text-sm text-slate-600 mt-1">Balances moderate capital requirements with high-quality lead generation. A sustainable growth engine.</p>
+                                <h4 class="font-bold text-slate-900">Market Integration</h4>
+                                <p class="text-sm text-slate-600 mt-1">Balanced risk/reward. Uses existing assets to convert new users in the EHS category.</p>
                             </div>
                         </li>
                         <li class="flex items-start">
                             <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent font-bold mr-4">3</div>
                             <div>
-                                <h4 class="font-bold text-slate-900">Competitive Market Acquisition</h4>
-                                <p class="text-sm text-slate-600 mt-1">High-risk, high-reward. Requires substantial capital and carries the risk of retaliatory bidding wars.</p>
+                                <h4 class="font-bold text-slate-900">Competitor Poaching</h4>
+                                <p class="text-sm text-slate-600 mt-1">Aggressive expansion. High capital cost but high potential for stealing market share.</p>
                             </div>
                         </li>
                     </ul>
@@ -199,9 +184,9 @@
         <section class="mb-20">
             <div class="bg-white rounded-2xl shadow-md overflow-hidden">
                 <div class="p-8 md:p-12 border-b border-slate-100">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-4">30-Day Implementation Roadmap</h2>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Tactical 30-Day Implementation Roadmap</h2>
                     <p class="text-slate-600 leading-relaxed max-w-4xl">
-                        A phased execution is critical for mitigating risk and ensuring analytical readiness. The initial phase focuses on infrastructure (tracking), followed by the immediate activation of defensive measures. Offensive scaling (Phase 4) is contingent upon data gathered in the preceding weeks.
+                        With high-conversion landing pages already developed, we move immediately into technical verification and campaign deployment. This roadmap prioritizes protecting our brand first, then aggressively scaling category and competitor-based bidding.
                     </p>
                 </div>
                 <div class="p-8 bg-slate-50">
@@ -210,25 +195,25 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-8 bg-white">
-                    <div class="p-4 rounded border border-slate-200">
-                        <div class="text-xs font-bold text-slate-400 uppercase">Days 1-5</div>
-                        <div class="font-bold text-slate-800">Infrastructure</div>
-                        <div class="text-xs text-slate-500 mt-1">Google Tag Setup</div>
+                    <div class="p-5 rounded-lg border border-slate-200 bg-slate-50/50">
+                        <div class="text-xs font-black text-brand-primary uppercase tracking-tighter mb-2">Days 1-7: Audit & Verify</div>
+                        <h4 class="font-bold text-slate-800 text-sm mb-2">Technical Foundation</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Verification of Google Tag Manager for full conversion attribution. Audit of existing landing pages to ensure "Ad-to-Page" relevance scores are maximized for Tier 2 keywords.</p>
                     </div>
-                    <div class="p-4 rounded border border-slate-200">
-                        <div class="text-xs font-bold text-slate-400 uppercase">Days 6-10</div>
-                        <div class="font-bold text-slate-800">Advocacy</div>
-                        <div class="text-xs text-slate-500 mt-1">Defensive Activation</div>
+                    <div class="p-5 rounded-lg border border-slate-200 bg-slate-50/50">
+                        <div class="text-xs font-black text-brand-secondary uppercase tracking-tighter mb-2">Days 8-15: Brand Advocacy</div>
+                        <h4 class="font-bold text-slate-800 text-sm mb-2">Defensive Activation</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Deployment of Tier 1 defensive campaigns. Mapping high-intent category keywords to audited assets to establish a baseline Impression Share of >95% on brand terms.</p>
                     </div>
-                    <div class="p-4 rounded border border-slate-200">
-                        <div class="text-xs font-bold text-slate-400 uppercase">Days 11-20</div>
-                        <div class="font-bold text-slate-800">Assets</div>
-                        <div class="text-xs text-slate-500 mt-1">Landing Page Dev</div>
+                    <div class="p-5 rounded-lg border border-slate-200 bg-slate-50/50">
+                        <div class="text-xs font-black text-brand-accent uppercase tracking-tighter mb-2">Days 16-22: Market Penetration</div>
+                        <h4 class="font-bold text-slate-800 text-sm mb-2">Competitor Conquesting</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Activation of Tier 3 aggressive bidding. Implementation of comparative messaging to intercept competitor traffic, utilizing existing specialized landing pages for direct poaching.</p>
                     </div>
-                    <div class="p-4 rounded border border-slate-200">
-                        <div class="text-xs font-bold text-slate-400 uppercase">Days 21-30</div>
-                        <div class="font-bold text-slate-800">Analysis</div>
-                        <div class="text-xs text-slate-500 mt-1">Auction Insights</div>
+                    <div class="p-5 rounded-lg border border-slate-200 bg-slate-50/50">
+                        <div class="text-xs font-black text-slate-400 uppercase tracking-tighter mb-2">Days 23-30: Refinement</div>
+                        <h4 class="font-bold text-slate-800 text-sm mb-2">Analytical Optimization</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">Comprehensive review of Auction Insights. Real-time bid adjustments based on competitor reaction. Scaling budget toward top-performing "Competitor-to-EcoOnline" search terms.</p>
                     </div>
                 </div>
             </div>
@@ -244,13 +229,11 @@
     <script>
         // --- UTILITY FUNCTIONS ---
 
-        // Label Wrapping Logic (Mandatory >16 chars)
         function wrapLabel(label) {
             if (label.length <= 16) return label;
             const words = label.split(' ');
             const lines = [];
             let currentLine = words[0];
-
             for (let i = 1; i < words.length; i++) {
                 if ((currentLine + " " + words[i]).length <= 16) {
                     currentLine += " " + words[i];
@@ -263,46 +246,35 @@
             return lines;
         }
 
-        // Shared Tooltip Configuration (Mandatory)
         const commonTooltipOptions = {
             callbacks: {
                 title: function(tooltipItems) {
                     const item = tooltipItems[0];
                     let label = item.chart.data.labels[item.dataIndex];
-                    if (Array.isArray(label)) {
-                        return label.join(' ');
-                    } else {
-                        return label;
-                    }
+                    return Array.isArray(label) ? label.join(' ') : label;
                 }
             }
         };
 
-        // Shared Chart Options
         Chart.defaults.font.family = "'Roboto', sans-serif";
         Chart.defaults.color = '#64748b';
 
-        // --- CHART 1: CPC Analysis (Bar Chart) ---
+        // --- CHART 1: CPC Analysis ---
         const cpcCtx = document.getElementById('cpcBarChart').getContext('2d');
-        const cpcLabelsRaw = [
-            'Tier 1: Brand Advocacy (Defensive)', 
-            'Tier 2: Category Integration (Growth)', 
-            'Tier 3: Market Acquisition (Aggressive)'
-        ];
-        const cpcLabelsProcessed = cpcLabelsRaw.map(wrapLabel);
+        const cpcLabelsProcessed = [
+            'Tier 1: Advocacy (Defensive)', 
+            'Tier 2: Category Integration', 
+            'Tier 3: Market Acquisition'
+        ].map(wrapLabel);
 
         new Chart(cpcCtx, {
             type: 'bar',
             data: {
                 labels: cpcLabelsProcessed,
                 datasets: [{
-                    label: 'Estimated Cost Per Click (USD)',
-                    data: [0.35, 8.50, 14.00], // Average of ranges
-                    backgroundColor: [
-                        '#10b981', // Emerald (Tier 1)
-                        '#0ea5e9', // Sky (Tier 2)
-                        '#6366f1'  // Indigo (Tier 3)
-                    ],
+                    label: 'Estimated CPC ($)',
+                    data: [0.35, 8.50, 14.00],
+                    backgroundColor: ['#10b981', '#0ea5e9', '#6366f1'],
                     borderRadius: 8,
                     barPercentage: 0.6,
                 }]
@@ -315,7 +287,7 @@
                     legend: { display: false },
                     title: {
                         display: true,
-                        text: 'Cost Scaling by Strategic Aggression',
+                        text: 'Estimated CPC by Strategic Tier',
                         font: { size: 16, weight: 'bold' },
                         padding: { bottom: 20 }
                     }
@@ -323,21 +295,16 @@
                 scales: {
                     y: {
                         beginAtZero: true,
-                        title: { display: true, text: 'Cost Per Click ($)' },
                         grid: { color: '#e2e8f0' }
                     },
-                    x: {
-                        grid: { display: false }
-                    }
+                    x: { grid: { display: false } }
                 }
             }
         });
 
-        // --- CHART 2: Executive Matrix (Radar Chart) ---
+        // --- CHART 2: Radar ---
         const radarCtx = document.getElementById('strategyRadarChart').getContext('2d');
-        // Labels: Risk Profile, Capital Required, Market Impact, Lead Quality
-        const radarLabelsRaw = ['Risk Profile', 'Capital Required', 'Market Impact', 'Cost Efficiency'];
-        const radarLabelsProcessed = radarLabelsRaw.map(wrapLabel);
+        const radarLabelsProcessed = ['Risk Profile', 'Capital Cost', 'Market Impact', 'ROI Efficiency'].map(wrapLabel);
 
         new Chart(radarCtx, {
             type: 'radar',
@@ -346,7 +313,7 @@
                 datasets: [
                     {
                         label: 'Tier 1: Advocacy',
-                        data: [1, 2, 4, 10], // Low Risk, Low Cap, Low Impact (on growth), High Efficiency
+                        data: [1, 2, 4, 10],
                         backgroundColor: 'rgba(16, 185, 129, 0.2)',
                         borderColor: '#10b981',
                         pointBackgroundColor: '#10b981',
@@ -354,7 +321,7 @@
                     },
                     {
                         label: 'Tier 2: Integration',
-                        data: [5, 6, 7, 7], // Med Risk, Med Cap, Good Impact, Good Efficiency
+                        data: [5, 6, 8, 7],
                         backgroundColor: 'rgba(14, 165, 233, 0.2)',
                         borderColor: '#0ea5e9',
                         pointBackgroundColor: '#0ea5e9',
@@ -362,7 +329,7 @@
                     },
                     {
                         label: 'Tier 3: Acquisition',
-                        data: [9, 9, 9, 3], // High Risk, High Cap, High Impact, Low Efficiency (Expensive)
+                        data: [9, 9, 10, 3],
                         backgroundColor: 'rgba(99, 102, 241, 0.2)',
                         borderColor: '#6366f1',
                         pointBackgroundColor: '#6366f1',
@@ -378,7 +345,7 @@
                     legend: { position: 'bottom' },
                     title: {
                         display: true,
-                        text: 'Multivariate Strategic Comparison',
+                        text: 'Strategic Decision Matrix',
                         font: { size: 16, weight: 'bold' }
                     }
                 },
@@ -386,51 +353,36 @@
                     r: {
                         angleLines: { color: '#e2e8f0' },
                         grid: { color: '#e2e8f0' },
-                        pointLabels: {
-                            font: { size: 12, weight: 'bold' },
-                            color: '#475569'
-                        },
+                        pointLabels: { font: { size: 11, weight: 'bold' } },
                         ticks: { display: false, max: 10 }
                     }
                 }
             }
         });
 
-        // --- CHART 3: Implementation Roadmap (Floating Bar / Gantt) ---
+        // --- CHART 3: Roadmap ---
         const roadmapCtx = document.getElementById('roadmapChart').getContext('2d');
-        const roadmapLabelsRaw = [
-            'Phase 1: Infrastructure & Readiness', 
-            'Phase 2: Foundational Advocacy', 
-            'Phase 3: High-Conversion Assets', 
-            'Phase 4: Analysis & Scaling'
-        ];
-        const roadmapLabelsProcessed = roadmapLabelsRaw.map(wrapLabel);
+        const roadmapLabelsProcessed = [
+            'Phase 1: Audit & Tech Verification', 
+            'Phase 2: Advocacy Deployment', 
+            'Phase 3: Market Penetration', 
+            'Phase 4: Analytical Optimization'
+        ].map(wrapLabel);
 
         new Chart(roadmapCtx, {
             type: 'bar',
             data: {
                 labels: roadmapLabelsProcessed,
                 datasets: [{
-                    label: 'Implementation Duration',
-                    // Data format for floating bars: [start, end]
-                    data: [
-                        [0, 5],   // Days 1-5
-                        [5, 10],  // Days 6-10
-                        [10, 20], // Days 11-20
-                        [20, 30]  // Days 21-30
-                    ],
-                    backgroundColor: [
-                        '#94a3b8', // Slate (Infra)
-                        '#10b981', // Emerald (Advocacy)
-                        '#0ea5e9', // Sky (Assets)
-                        '#6366f1'  // Indigo (Scaling)
-                    ],
+                    label: 'Days',
+                    data: [[0, 7], [7, 15], [15, 22], [22, 30]],
+                    backgroundColor: ['#94a3b8', '#10b981', '#0ea5e9', '#6366f1'],
                     borderRadius: 4,
                     barPercentage: 0.5
                 }]
             },
             options: {
-                indexAxis: 'y', // Horizontal Bar
+                indexAxis: 'y',
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
@@ -443,14 +395,14 @@
                             },
                             label: function(context) {
                                 const val = context.raw;
-                                return ` Days ${val[0] + 1} to ${val[1]}`;
+                                return ` Days ${val[0]} to ${val[1]}`;
                             }
                         }
                     },
                     legend: { display: false },
                     title: {
                         display: true,
-                        text: '30-Day Execution Timeline',
+                        text: '30-Day Phased Rollout',
                         font: { size: 16, weight: 'bold' }
                     }
                 },
@@ -458,12 +410,10 @@
                     x: {
                         min: 0,
                         max: 30,
-                        title: { display: true, text: 'Day of Implementation' },
+                        title: { display: true, text: 'Day' },
                         grid: { color: '#e2e8f0' }
                     },
-                    y: {
-                        grid: { display: false }
-                    }
+                    y: { grid: { display: false } }
                 }
             }
         });
